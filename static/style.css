@@ -1,0 +1,17 @@
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #e9b5b5;
+}
+
+h1 {
+    color: #c9c9c9;
+}
+
+.event {
+    background: rgb(182, 146, 146);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #007bff;
+}
