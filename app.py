@@ -59,9 +59,9 @@ def webhook():
 
 @app.route('/events', methods=['GET'])
 def get_events():
-    events = list(collection.find({}, {'_id': 0}).sort('timestamp', -1).limit(10))
+    limit = request.args.get('limit', default=50, type=int) 
+    events = list(collection.find({}, {'_id': 0}).sort('timestamp', -1).limit(limit))
     return jsonify(events)
-
 
 if __name__ == '__main__':
     print("Starting Flask app...")
